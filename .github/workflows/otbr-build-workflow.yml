@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build OTBR for ${{ matrix.target }}/${{ matrix.subtarget }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # Use 22.04 to avoid python3-distutils issues on 24.04
     strategy:
       fail-fast: false
       matrix:
